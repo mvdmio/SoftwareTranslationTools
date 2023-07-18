@@ -1,0 +1,30 @@
+﻿@using STT.MAUIBlazor.Providers
+@using STT.MAUIBlazor.Data
+
+@page "/settings"
+
+@inject SettingsProvider SettingsProvider;
+
+<div class="flex flex-col gap-3">
+   <div>
+      <h1>Settings</h1>
+   </div>
+   <div class="flex flex-col gap-2">
+      <label>Path</label>
+      <InputText DisplayName="Path" Placeholder="C:/path/to/root/of/source/directory" @bind-Value="SettingsData.Path" @onchange="Save" />
+   </div>
+</div>
+
+@code {
+   public SettingsData SettingsData;
+
+   protected override async Task OnInitializedAsync()
+   {
+      SettingsData = await SettingsProvider.Retrieve();
+   }
+
+   public void Save()
+   {
+      SettingsProvider.Save(SettingsData);
+   }
+}

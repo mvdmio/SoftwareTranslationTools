@@ -1,5 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
-using STT.MAUIBlazor.Data;
+using STT.MAUIBlazor.Providers;
 
 namespace STT.MAUIBlazor;
 
@@ -10,8 +10,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
-			.ConfigureFonts(fonts =>
-			{
+			.ConfigureFonts(fonts => {
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 			});
 
@@ -22,7 +21,7 @@ public static class MauiProgram
 		builder.Logging.AddDebug();
 #endif
 
-		builder.Services.AddSingleton<WeatherForecastService>();
+		builder.Services.AddSingleton<SettingsProvider>();
 
 		return builder.Build();
 	}
