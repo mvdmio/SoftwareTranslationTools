@@ -10,8 +10,10 @@
       <h1>Settings</h1>
    </div>
    <div class="flex flex-col gap-2">
-      <label>Path</label>
-      <InputText DisplayName="Path" Placeholder="C:/path/to/root/of/source/directory" @bind-Value="SettingsData.Path" @onchange="Save" />
+      <div>
+         <label>Path</label>
+         <InputText DisplayName="Path" Placeholder="C:/path/to/root/of/source/directory" @bind-Value="SettingsData.Path" @onchange="Save" />
+      </div>
    </div>
 </div>
 
