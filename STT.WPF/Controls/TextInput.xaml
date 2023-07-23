@@ -3,11 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:local="clr-namespace:STT.WPF.Controls"
+             xmlns:viewModel="clr-namespace:STT.WPF.ViewModel"
              mc:Ignorable="d"
-             d:DesignHeight="18" d:DesignWidth="300">
+             d:DesignHeight="18" d:DesignWidth="100">
+    <UserControl.DataContext>
+        <viewModel:TextInputViewModel />
+    </UserControl.DataContext>
+    
     <StackPanel>
-        <Label Content="{Binding Label}" />
+        <TextBlock Text="{Binding Label}" />
         <TextBox Text="{Binding Value}" />
     </StackPanel>
 </UserControl>

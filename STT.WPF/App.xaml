@@ -1,9 +1,21 @@
 ﻿<Application x:Class="STT.WPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:STT.WPF"
+             xmlns:viewModel="clr-namespace:STT.WPF.ViewModel"
+             xmlns:view="clr-namespace:STT.WPF.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- TODO: Add Style dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:TranslationPageViewModel}">
+                <view:TranslationPage />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewModel:SettingsPageViewModel}">
+                <view:SettingsPage />
+            </DataTemplate>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

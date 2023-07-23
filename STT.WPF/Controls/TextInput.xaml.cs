@@ -1,16 +1,16 @@
 ﻿using System.Windows.Controls;
+using STT.WPF.ViewModel;
 
 namespace STT.WPF.Controls;
 
 public partial class TextInput : UserControl
 {
-    public string Label { get; set; }
-    public string? Value { get; set; }
+   private TextInputViewModel _viewModel;
 
-    public TextInput()
-    {
-        Label = string.Empty;
+   public TextInput()
+   {
+      DataContext = _viewModel = new TextInputViewModel();
 
-        InitializeComponent();
-    }
+      InitializeComponent();
+   }
 }

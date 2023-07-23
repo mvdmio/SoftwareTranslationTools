@@ -1,29 +1,22 @@
 ﻿using System.Windows;
+using STT.WPF.ViewModel;
 
-namespace STT.WPF
+namespace STT.WPF;
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    private readonly MainWindowViewModel _viewModel;
+
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
+        DataContext = _viewModel = new MainWindowViewModel();
+        _viewModel.NavigateToTranslationPage();
 
-            NavigateToTranslationPage();
-        }
+        InitializeComponent();
+    }
 
-        private void NavigateToTranslationPage()
-        {
-            ContentFrame.Navigate(new TranslationPage());
-        }
-
-        private void NavigateToSettingsPage()
-        {
-            ContentFrame.Navigate(new SettingsPage());
-        }
-
-        private void SettingsButton_OnClick(object sender, RoutedEventArgs e)
-        {
-            NavigateToSettingsPage();
-        }
+    private void SettingsButton_OnClick(object sender, RoutedEventArgs e)
+    {
+        _viewModel.NavigateToSettingsPage();
     }
 }
