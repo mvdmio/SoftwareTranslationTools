@@ -7,24 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10,0,10,0">
-            <DockPanel>
-                <Label Content="TranslationTools" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24"/>
-                <Button Content="Settings" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Border Grid.Row="0" BorderThickness="1,1,1,1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10,0,10,0">
+            <DockPanel x:Name="HeaderPanel">
+                <Label Content="TranslationTools" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" />
+                <Button Content="Settings" HorizontalAlignment="Right" VerticalAlignment="Center" Click="SettingsButton_OnClick" />
             </DockPanel>
         </Border>
 
-        <ListBox Grid.Row="1" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" />
-        <DataGrid Grid.Row="1" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+        <Frame x:Name="ContentFrame" Grid.Row="1" NavigationUIVisibility="Hidden"></Frame>
 
     </Grid>
 </Window>
