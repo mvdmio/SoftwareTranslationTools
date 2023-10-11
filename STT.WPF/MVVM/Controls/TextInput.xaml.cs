@@ -1,7 +1,7 @@
 ﻿using System.Windows.Controls;
-using STT.WPF.ViewModel;
+using STT.WPF.MVVM.ViewModel;
 
-namespace STT.WPF.Controls;
+namespace STT.WPF.MVVM.Controls;
 
 public partial class TextInput : UserControl
 {

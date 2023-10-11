@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls;
 
-namespace STT.WPF.View;
+namespace STT.WPF.MVVM.View;
 
 public partial class TranslationPage : UserControl
 {

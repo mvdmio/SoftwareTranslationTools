@@ -1,9 +1,9 @@
-﻿<UserControl x:Class="STT.WPF.Controls.TextInput"
+﻿<UserControl x:Class="STT.WPF.MVVM.Controls.TextInput"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:viewModel="clr-namespace:STT.WPF.ViewModel"
+             xmlns:viewModel="clr-namespace:STT.WPF.MVVM.ViewModel"
              mc:Ignorable="d"
              d:DesignHeight="18" d:DesignWidth="100">
     <UserControl.DataContext>
