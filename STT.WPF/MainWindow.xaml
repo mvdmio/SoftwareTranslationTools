@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wpf="clr-namespace:STT.WPF"
         mc:Ignorable="d"
         Title="MainWindow" 
         Height="450" Width="800"
+        d:DataContext="{d:DesignInstance wpf:MainWindowViewModel, IsDesignTimeCreatable=True}"
 >
     <Grid>
         <Grid.RowDefinitions>
@@ -16,7 +18,7 @@
         <Border Grid.Row="0" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10,0,10,0">
             <DockPanel x:Name="HeaderPanel">
                 <TextBlock Text="TranslationTools" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" />
-                <Button Content="Settings" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding ToggleSettingsPage}" />
+                <Button Content="Settings" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding ToggleSettingsPageCommand}" />
             </DockPanel>
         </Border>
 

@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace STT.WPF.MVVM.Core;
+namespace STT.WPF.Core;
 
 public class ViewModelBase : ObservableObject
 {

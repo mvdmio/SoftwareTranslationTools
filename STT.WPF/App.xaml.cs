@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using Microsoft.Extensions.DependencyInjection;
-using STT.WPF.MVVM.ViewModel;
+using STT.WPF.Pages;
 using STT.WPF.Services;
 
 namespace STT.WPF;

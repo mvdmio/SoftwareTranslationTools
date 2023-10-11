@@ -1,7 +1,7 @@
 ﻿using System;
 using CommunityToolkit.Mvvm.ComponentModel;
 using Microsoft.Extensions.DependencyInjection;
-using STT.WPF.MVVM.Core;
+using STT.WPF.Core;
 
 namespace STT.WPF.Services;
 

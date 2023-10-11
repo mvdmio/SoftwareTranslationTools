@@ -1,6 +1,7 @@
 ﻿using System.Windows.Controls;
+using STT.WPF.Core;
 
-namespace STT.WPF.MVVM.View;
+namespace STT.WPF.Pages;
 
 public partial class TranslationPage : UserControl
 {
@@ -8,4 +9,8 @@ public partial class TranslationPage : UserControl
     {
         InitializeComponent();
     }
+}
+
+public class TranslationPageViewModel : ViewModelBase
+{
 }
