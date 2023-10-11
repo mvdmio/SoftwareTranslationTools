@@ -23,28 +23,6 @@ public partial class MainWindowViewModel : ViewModelBase
     public MainWindowViewModel(NavigationService navigationService)
     {
         _navigationService = navigationService;
-        
-        NavigateToTranslationPage();
-    }
-
-    [RelayCommand]
-    private void ToggleSettingsPage()
-    {
-        if (NavigationService.CurrentView is SettingsPageViewModel)
-            NavigateToTranslationPage();
-        else
-            NavigateToSettingsPage();
-    }
-    
-    [RelayCommand]
-    private void NavigateToTranslationPage()
-    {
-        NavigationService.NavigateTo<TranslationPageViewModel>();
-    }
-
-    [RelayCommand]
-    private void NavigateToSettingsPage()
-    {
-        NavigationService.NavigateTo<SettingsPageViewModel>();
+        _navigationService.NavigateTo<TranslationPageViewModel>();
     }
 }

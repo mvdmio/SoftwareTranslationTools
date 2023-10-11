@@ -5,10 +5,26 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:STT.WPF"
+    xmlns:pages="clr-namespace:STT.WPF.Pages"
     mc:Ignorable="d"
     d:DesignHeight="480" d:DesignWidth="480"
+    d:DataContext="{d:DesignInstance pages:SettingsPageViewModel, IsDesignTimeCreatable=True}"
 >
-    <StackPanel>
-        <Label FontSize="18" FontWeight="SemiBold">Settings</Label>
-    </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10,0,10,0">
+            <DockPanel x:Name="HeaderPanel">
+                <TextBlock Text="TranslationTools" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" />
+                <Button Content="Home" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding NavigateToTranslationPageCommand}" />
+            </DockPanel>
+        </Border>
+        
+        <StackPanel Grid.Row="1">
+            <Label FontSize="18" FontWeight="SemiBold">Settings</Label>
+        </StackPanel>
+    </Grid>
 </UserControl>

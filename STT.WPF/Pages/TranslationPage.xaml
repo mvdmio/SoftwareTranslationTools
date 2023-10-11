@@ -4,16 +4,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:pages="clr-namespace:STT.WPF.Pages"
     mc:Ignorable="d"
     d:DesignHeight="480" d:DesignWidth="480"
+    d:DataContext="{d:DesignInstance pages:TranslationPageViewModel, IsDesignTimeCreatable=True}"
 >
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" />
-        <DataGrid Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" />
+        <Border Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Stretch" VerticalAlignment="Top" Padding="10,0,10,0">
+            <DockPanel x:Name="HeaderPanel">
+                <TextBlock Text="TranslationTools" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="24" />
+                <Button Content="Settings" HorizontalAlignment="Right" VerticalAlignment="Center" Command="{Binding NavigateToSettingsPageCommand}" />
+            </DockPanel>
+        </Border>
+        
+        <ListBox Grid.Row="1" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" />
+        <DataGrid Grid.Row="1" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}" />
     </Grid>
 </UserControl>
