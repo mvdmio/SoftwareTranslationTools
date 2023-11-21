@@ -11,7 +11,7 @@ public class TranslationRetriever
 
    public void AddSource(ITranslationSource translationSource)
    {
-      ArgumentNullException.ThrowIfNull(translationSource);
+      ArgumentNullException.ThrowIfNull(translationSource, nameof(translationSource));
 
       _sources.Add(translationSource);
    }
