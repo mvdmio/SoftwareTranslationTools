@@ -2,15 +2,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STT.DesktopUI.WPF", "STT.DesktopUI.WPF\STT.DesktopUI.WPF.csproj", "{663F5C4E-6F5F-414A-AC73-895218CF4CCE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STT", "STT\STT.csproj", "{BC20DC14-9D33-494E-B9A7-372923763ABD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AAF6DD0-F59D-49FB-A632-B6BA12A1E56A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STT.Tests", "STT.Tests\STT.Tests.csproj", "{7CEB43A9-0B02-4966-9687-A1DF61A4CD23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STT.DesktopUI.Avalonia", "STT.DesktopUI.Avalonia\STT.DesktopUI.Avalonia.csproj", "{EDC25060-1B4B-42A8-AB95-241C17994B24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STT.DesktopUI.Avalonia", "STT.DesktopUI.Avalonia\STT.DesktopUI.Avalonia.csproj", "{EDC25060-1B4B-42A8-AB95-241C17994B24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +16,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{663F5C4E-6F5F-414A-AC73-895218CF4CCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{663F5C4E-6F5F-414A-AC73-895218CF4CCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{663F5C4E-6F5F-414A-AC73-895218CF4CCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{663F5C4E-6F5F-414A-AC73-895218CF4CCE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BC20DC14-9D33-494E-B9A7-372923763ABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC20DC14-9D33-494E-B9A7-372923763ABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC20DC14-9D33-494E-B9A7-372923763ABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -42,7 +36,6 @@ Global
 		{7CEB43A9-0B02-4966-9687-A1DF61A4CD23} = {0AAF6DD0-F59D-49FB-A632-B6BA12A1E56A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AA059811-E349-4A93-9905-472AC3D09044}
-										SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
 	EndGlobalSection
 EndGlobal
