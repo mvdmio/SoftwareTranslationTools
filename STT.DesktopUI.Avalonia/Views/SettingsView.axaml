@@ -13,5 +13,22 @@
       <vm:SettingsViewModel />
    </Design.DataContext>
 
-   Settings Page
+    <Border Padding="10">
+        <StackPanel Spacing="10">
+			<StackPanel Orientation="Horizontal">
+				<TextBlock FontSize="20" FontWeight="Bold">Settings</TextBlock>
+				<Button Click="Close_Settings_Click">X</Button>
+            </StackPanel>
+		    <StackPanel>
+                <TextBlock>Root Translation Directory</TextBlock>
+				<StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBox Name="RootPath" Watermark="C:/Path/To/Root/Of/Translation.files" Text="{ Binding RootPath }" />
+				    <Button Click="RootPath_BrowseButton_Click">
+						Browse	
+					</Button>
+                </StackPanel>
+		    </StackPanel>
+	    </StackPanel>
+    </Border>
+   
 </UserControl>
